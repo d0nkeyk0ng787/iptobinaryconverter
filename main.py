@@ -1,7 +1,8 @@
 #! /usr/bin/env python3
 
 # Simple program that can convert an ip address into its binary version
-# Wrote this more for the sake of it then to serve any real purpose as it's quicker to do this in your head
+# I wrote this more for the sake of it then to serve any real purpose as it's quicker to do this in your head
+# WORK IN PROGRESS
 
 def converttobinary(iplist):
 	pass
