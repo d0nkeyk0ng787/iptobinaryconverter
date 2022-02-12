@@ -1,40 +1,36 @@
 #! /usr/bin/env python3
 
+# Written by D0nkeyk0ng787
 # Simple program that can convert an ip address into its binary version
-# I wrote this more for the sake of it then to serve any real purpose as it's quicker to do this in your head
-# WORK IN PROGRESS
+# Wrote this more for the sake of it rather then to serve any real purpose
 
-def converttobinary(iplist):
-	pass
+def createBinaryIP(binarylist):
+	sep = "."
+	x = sep.join(binarylist)
+	print(x)
+
 
 def main():
 
 	active = True
 	ui = input("Enter a valid IP address you wish to convert to binary: ")
+	#ui = "192.168.100.100"
 
 	while active:
 		uisplit = ui.split('.', 4)
-		#uireplace = ui.replace('.', '')
-		#print(uisplit)
+		bi = []
 		for i in range(len(uisplit)):
-			#print(uisplit[i])
+
 			l = [] 
 			l.append(uisplit[i])
-			#print(l)
 
-			for i in range(len(l)):
-				#toint = int(l[i])
-				#print(l[i])
-				ti = int(l[i])
-				#print(ti)
-				#dtb = bin(ti.replace("0b",""))
+			for j in range(len(l)):
+
+				ti = int(l[j])
 				dtb = bin(ti)
-				print(dtb.replace("0b",""))
-			#print(l)
-			#toint = int(uisplit[i])
-			#print(toint)
-			#dtb = bin(toint.replace("0b",""))
-
+				
+				bi.append(dtb.replace("0b", ""))
+		createBinaryIP(bi)
 		break
 
 if __name__ == '__main__':
